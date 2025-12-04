@@ -18,8 +18,8 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - macos-14   # ARM
-          - macos-13   # x86_64
+          - macos-latest   # ARM
+          - macos-15-intel
     runs-on: ${{ matrix.os }}
     name: Run on ${{ matrix.os }}
     steps:

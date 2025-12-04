@@ -4,5 +4,9 @@ d = np.int32
 for i in range(100000):
     d = (d, (1,))
 
-np.dtype(d)
-print("OK")
+try:
+    np.dtype(d)
+except RecursionError:
+    pass
+else:
+    raise RuntimeError("no recursion error")
