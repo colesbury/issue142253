@@ -1,7 +1,7 @@
 import numpy as np
 
 d = np.int32
-for i in range(100000):
+for i in range(1000000):
     d = (d, (1,))
 
 try:
