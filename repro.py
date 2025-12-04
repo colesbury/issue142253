@@ -6,7 +6,7 @@ for i in range(100000):
 
 try:
     np.dtype(d)
-except RecursionError:
-    pass
+except RecursionError as exc:
+    print(f"RecursionError caught: {exc}")
 else:
     raise RuntimeError("no recursion error")
